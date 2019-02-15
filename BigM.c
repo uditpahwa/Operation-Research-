@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include "regular_simplex.h"
-#include "Untitled10.h"
+#include "bigm_simplex.h"
 
 //void Reg_Simplex(int num_eq,int num_var,float tableau[100][100],int num_iter,int a);
 int main()
@@ -132,13 +132,13 @@ int main()
      }
 
      big_m = 1000;
-    /* if(optimise_type == 2)
+    if(optimise_type == 2)
      {
          for(i=0;i<=num_var;i++)
          {
              objective[i]=-objective[i];
          }
-     }*/
+     }
      for(j=0;j<=num_var+temp;j++)
      {
          tableau[num_eq][j] = (float)-1*big_m*sum[j] - objective[j];
